@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Incroyable Monde de Crislin | Site Officiel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffcc00;
+            --secondary: #ff6600;
+            --accent: #4caf50;
+            --sky: #f0fbff;
+            --text: #333;
+            --pink: #ec4899;
+            --blue: #0284c7;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--sky);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 10px solid white;
+        }
+
+        h1 { font-size: 3.5em; margin: 0; text-shadow: 3px 3px #cc5200; }
+        h2 { color: var(--secondary); border-bottom: 3px dashed var(--primary); padding-bottom: 10px; margin-top: 40px; }
+        
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .chapter-box { margin-bottom: 40px; padding: 20px; border-radius: 20px; }
+        .chapter-number { 
+            background: var(--primary); 
+            color: white; 
+            padding: 5px 15px; 
+            border-radius: 50px; 
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .joke-card {
+            background: #fff9e6;
+            border: 3px solid var(--primary);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0 40px;
+        }
+
+        .btn-custom {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Quicksand';
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+        .btn-custom:hover { transform: scale(1.05); background: #e65c00; }
+
+        .quiz-box { background: #e8f5e9; padding: 30px; border-radius: 20px; border: 4px dashed var(--accent); }
+        .option-btn {
+            display: block; width: 100%; margin: 10px 0; padding: 12px;
+            border: 2px solid var(--accent); background: white; border-radius: 10px;
+            cursor: pointer; font-family: 'Quicksand'; font-size: 1em;
+        }
+
+        .draw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+        .draw-step { background: white; padding: 15px; border-radius: 15px; text-align: center; border: 2px solid #f9a8d4; }
+
+        footer { text-align: center; padding: 50px; background: #333; color: white; margin-top: 50px; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: bold; }
+
+        /* Share Buttons */
+        .share-btn { padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.9em; color: white; display: inline-block; margin: 5px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌟 CRISLIN 🌟</h1>
+    <p style="font-size: 1.2em;">L'enfant qui transformait les pépins en sourires</p>
+</header>
+
+<div class="container">
+
+    <section class="chapter-box" style="background: #fff; border: 3px solid var(--primary);">
+        <h2 style="text-align: center; border: none; margin-top: 0;">✨ Avant-propos ✨</h2>
+        <p style="font-style: italic; text-align: center; color: #555;">"Bienvenue dans un monde où les erreurs ne sont que des éclats de rire déguisés."</p>
+        <p>Ce site est un compagnon pour tous les enfants qui trouvent parfois que l'école va trop vite ou que leur esprit aime s'évader. À travers Crislin, découvre que tes différences ne sont pas des obstacles, mais tes plus grandes forces !</p>
+    </section>
+
+    <section class="joke-card">
+        <h3>😂 Le Journal des Blagues de Crislin</h3>
+        <p id="joke-display" style="font-size: 1.2em; min-height: 50px; font-weight: bold;">Clique pour une rigolade !</p>
+        <button class="btn-custom" onclick="generateJoke()">Nouvelle Blague !</button>
+    </section>
+
+    <section>
+        <span class="chapter-number">Chapitres 1 à 6</span>
+        <h2>L'Aventure Commence</h2>
+        <p>Au milieu des lumières de la ville, <b>Crislin</b> s'arrête devant des chaussettes multicolores. Il rêve d'être célèbre pour ses blagues ! Avec sa <b>casquette invisible de l'Optimisme</b>, il transforme la pluie en régate et un placard à balais en fusée spatiale. Pour lui, chaque échec est une leçon déguisée en farce.</p>
+
+        <span class="chapter-number">Chapitres 7 à 10</span>
+        <h2>Le Défi de l'École</h2>
+        <p>Pas facile de se concentrer quand les verbes s'envolent ! Crislin a inventé la méthode des <b>Chaussettes-Verbes</b> et le <b>Dôme de Verre</b> pour rester dans sa bulle. En travaillant par petites "missions commandos", il finit par triompher de la conjugaison avec la meilleure note de la classe !</p>
+
+        <span class="chapter-number">Chapitres 11 à 12</span>
+        <h2>La Jungle des Chiffres</h2>
+        <p>Les maths deviennent un jeu quand on utilise des miettes de biscuits pour les soustractions. Crislin prouve que l'école n'est pas une prison pour l'imagination, mais un endroit pour apprendre à s'en servir.</p>
+    </section>
+
+    <section class="quiz-box">
+        <h2 style="border:none; text-align:center; margin-top:0;">🧠 Le Défi de Crislin</h2>
+        <div id="quiz">
+            <p id="question" style="font-weight:bold; text-align:center; font-size: 1.1em;"></p>
+            <div id="options"></div>
+            <p id="feedback" style="text-align:center; margin-top:15px; font-weight:bold;"></p>
+        </div>
+    </section>
+
+    <section style="background: #fdf2f8; border: 4px solid var(--pink); border-radius: 30px; padding: 30px; margin-top: 40px;">
+        <h2 style="color: var(--pink); border-bottom-color: #f9a8d4; text-align: center; margin-top:0;">🎨 Dessine Crislin !</h2>
+        <div class="draw-grid">
+            <div class="draw-step"><span>1️⃣</span><p>Un cercle (visage) et un triangle (casquette).</p></div>
+            <div class="draw-step"><span>2️⃣</span><p>De grands yeux ronds et un sourire géant.</p></div>
+            <div class="draw-step"><span>3️⃣</span><p>Une salopette et des bras grands ouverts.</p></div>
+            <div class="draw-step"><span>4️⃣</span><p>Des chaussettes hautes à pois et rayures !</p></div>
+        </div>
+    </section>
+
+    <section style="text-align: center; margin: 40px 0; padding: 20px; background: #f3f4f6; border-radius: 20px;">
+        <p style="font-weight: bold;">🌟 Tu aimes Crislin ? Partage le site ! 🌟</p>
+        <a href="https://api.whatsapp.com/send?text=Découvre l'incroyable monde de Crislin ! Histoires et blagues ici : [TON_LIEN]" target="_blank" class="share-btn" style="background: #25D366;">WhatsApp</a>
+        <a href="mailto:?subject=Découverte magique&body=Regarde ce site génial : [TON_LIEN]" class="share-btn" style="background: #ea4335;">Email</a>
+        <button onclick="copyLink()" class="share-btn" style="background: var(--blue); border:none; cursor:pointer;">Copier le lien</button>
+    </section>
+
+    <section style="background: #e0f2fe; border: 3px solid var(--blue); border-radius: 30px; padding: 30px;">
+        <h2 style="color: var(--blue); border-bottom-color: #7dd3fc; margin-top: 0;">L'Ami de Crislin : Charly</h2>
+        <p>Bonjour ! Je m'appelle <b>Charly</b>. J'ai aidé Crislin à créer ce site car je crois que chaque enfant a un super-pouvoir unique. Si tu as une question ou une idée, n'hésite pas à m'écrire !</p>
+        <p>📧 Email : <a href="mailto:Charlychyes@gmail.com" style="color: var(--blue); font-weight: bold;">Charlychyes@gmail.com</a></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>Site de Crislin - Créé avec passion par Charly</p>
+    <p>Mon Code Secret : <b>05102005</b></p>
+    <p><i>"Même si ce n'est pas parfait, ce sera sûrement amusant !"</i></p>
+</footer>
+
+<script>
+    // BLAGUES
+    const jokes = [
+        "Pourquoi les oiseaux volent vers le sud ? Parce que c'est trop loin à pied !",
+        "Que dit un citron qui veut faire une blague ? 'Je suis pressé !'",
+        "Le comble pour un électricien ? De ne pas être au courant !",
+        "Comment appelle-t-on un chat dans l'espace ? Un chat-llonaute !",
+        "Pourquoi Crislin sourit ? Car il a une blague cachée dans sa chaussette !"
+    ];
+
+    function generateJoke() {
+        const randomIndex = Math.floor(Math.random() * jokes.length);
+        document.getElementById('joke-display').innerText = jokes[randomIndex];
+    }
+
+    // QUIZ
+    const questions = [
+        { q: "Quelle est la casquette invisible de Crislin ?", a: ["La Colère", "L'Optimisme", "Le Sommeil"], c: 1 },
+        { q: "Qu'utilise-t-il pour ses soustractions ?", a: ["Des miettes de biscuits", "Des billes", "Des nuages"], c: 0 }
+    ];
+
+    let currentQ = 0;
+    function loadQuiz() {
+        const q = questions[currentQ];
+        document.getElementById('question').innerText = q.q;
+        const optDiv = document.getElementById('options');
+        optDiv.innerHTML = "";
+        q.a.forEach((opt, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerText = opt;
+            btn.onclick = () => {
+                const f = document.getElementById('feedback');
+                if(i === q.c) { f.innerText = "✅ Bravo ! Tu es un expert !"; f.style.color = "green"; }
+                else { f.innerText = "❌ Réessaie, Crislin croit en toi !"; f.style.color = "red"; }
+            };
+            optDiv.appendChild(btn);
+        });
+    }
+
+    // COPIER LE LIEN
+    function copyLink() {
+        const el = document.createElement('textarea');
+        el.value = window.location.href;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alert("Lien copié ! Partage-le vite ! 😊");
+    }
+
+    window.onload = () => { generateJoke(); loadQuiz(); };
+</script>
+
+</body>
+</html>
